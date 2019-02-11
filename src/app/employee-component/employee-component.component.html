@@ -1,0 +1,79 @@
+
+
+
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+
+<div class="container" >
+
+<div class="well">
+  <ul class="breadcrumb">
+    <li class="active"><a [routerLink]="['']">User Details/&nbsp;</a></li>
+    <li class="inactive"><a  [routerLink]="['login']">Log In&nbsp;</a></li>
+    </ul>
+</div>
+<div id="myTabContent" class="tab-content">
+<div class="tab-pane active in"  >
+<form (ngSubmit)="onSubmit()" >
+    <div class="form-group" >
+      <label for="empid" >Employe Id:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <input type="text" class="form-control" id="empid" required [(ngModel)]="employee.empid" name="empid"></label>
+    </div>
+    <div class="form-group">
+      <label for="empname">Employee Name:      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="form-control" id="empname" required [(ngModel)]="employee.empname" name="empname">
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="contactnumber">Contact Number:    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input type="text" class="form-control" id="contactnumber" required [(ngModel)]="employee.contactnumber" name="contactnumber">
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="alternatemobilenbr">Alternative Contact:      &nbsp; <input type="text" class="form-control" id="alternatemobilenbr" required [(ngModel)]="employee.alternatemobilenbr" name="alternatemobilenbr">
+      </label>
+    </div>
+    <div class="form-group">
+        <label for="officemailid">Office EmailId:    &nbsp;  &nbsp;    &nbsp;  &nbsp;  &nbsp;   <input type="text" class="form-control" id="officemailid" required [(ngModel)]="employee.officemailid" name="officemailid">
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="personalmailid">Personal EmailId:     &nbsp;  &nbsp; &nbsp;<input type="text" class="form-control" id="personalmailid" required [(ngModel)]="employee.personalmailid" name="personalmailid">
+        </label>
+      </div>
+      <div class="form-group">
+          <label for="address"> Present Address:   &nbsp;  &nbsp; &nbsp;<input type="text" class="form-control" id="address" required [(ngModel)]="employee.address" name="address">
+          </label>
+        </div>
+      <div class="form-group">
+          <label for="permanentaddress">Permanent Address:          <input type="text" class="form-control" id="permanentaddress" required [(ngModel)]="employee.permanentaddress" name="permanentaddress">
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="skills">Skills:        &nbsp;  &nbsp;    &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;<input type="text" class="form-control" id="skills" required [(ngModel)]="employee.skills" name="skills">
+          </label>
+        </div>
+        <div class="form-group">
+            <label for="experience">Experience:       &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;<input type="text" class="form-control" id="experience" required [(ngModel)]="employee.experience" name="experience">
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="dob">Date Of Birth:         &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  <input type="text" class="form-control" id="dob" required [(ngModel)]="employee.dob" name="dob">
+            </label>
+          </div>
+          <div class="form-group">
+              <label for="doj">Date Of Joining:      &nbsp;  &nbsp; &nbsp;  <input type="text" class="form-control" id="doj" required [(ngModel)]="employee.doj" name="doj">
+              </label>
+          </div>
+ <div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</div>
+
+</form>
+</div>
+
+
+
+
+<div [hidden]="!submitted">
+<h4>You submitted successfully!</h4>
+<button class="btn btn-success" (click)="newCustomer()">Add</button>
+</div>
+</div>
+</div>

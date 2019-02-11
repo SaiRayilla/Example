@@ -1,0 +1,134 @@
+<div class="well">
+  <ul class="nav nav-tabs">
+    
+      <button type="submit" class="btnSubmit" (click)="back()">Back</button>
+    </ul>
+<div>
+    
+<h3>Find By EmployeeID/Find By Employee Name</h3>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group"  style="width: 300px;">
+      <label >Employee Id:<input type="text" class="form-control" id="empid" required [(ngModel)]="empid" name="empid" placeholder="empid">
+      </label>
+      <br>
+      OR
+      <br>
+          <label >Employee Name:<input type="text" class="form-control" id="empname" required [(ngModel)]="empname" name="empname" placeholder="empname">
+      </label>
+    </div>
+    
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+
+ </form>
+        <!-- <table  class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5" border="1">
+            <thead>
+              <tr>  -->
+              <!-- <th>Emp ID</th>
+                <mfDefaultSorter by="name">Name</mfDefaultSorter>
+                <th>Emp Name</th>
+                <th>Contact Number</th>
+                <th>Alternate Mobile Number</th>
+                <th>Office Mail Id</th>
+                <th>Personal Mail Id</th>
+                <th>Address</th>
+                <th>Permanenet Address</th>
+                <th>Skills</th>
+                <th>Experience</th>
+                <th>Date Of Joining</th>
+                <th>Date Of Birth</th>   -->
+                <!-- <th >
+                  <mfDefaultSorter by="empid">Emp ID</mfDefaultSorter>
+              </th>
+              <th>
+                  <mfDefaultSorter by="empname">Emp Name</mfDefaultSorter>
+              </th>
+              <th >
+                  <mfDefaultSorter by="contactnumber">Contact Number</mfDefaultSorter>
+              </th>
+              <th >
+                  <mfDefaultSorter by="alternatemobilenbr">Alternate Mobile Number</mfDefaultSorter>
+              </th>
+              <th>
+                <mfDefaultSorter by="officemailid">Office Mail Id</mfDefaultSorter>
+            </th>
+            <th >
+                <mfDefaultSorter by="personalmailid">Personal Mail Id</mfDefaultSorter>
+            </th>
+            <th >
+                <mfDefaultSorter by="address">Address</mfDefaultSorter>
+            </th>
+            <th style="width: 10%">
+                <mfDefaultSorter by="permanentaddress">Permanenet Address</mfDefaultSorter>
+            </th>
+            <th style="width: 5%" >
+              <mfDefaultSorter by="skills">Skills</mfDefaultSorter>
+          </th>
+          <th >
+              <mfDefaultSorter by="experience">Experience</mfDefaultSorter>
+          </th>
+          <th >
+              <mfDefaultSorter by="doj">Date Of Joining</mfDefaultSorter>
+          </th>
+          <th >
+              <mfDefaultSorter by="dob">Date Of Birth</mfDefaultSorter>
+          </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employes of Employee ">
+                <td>{{ employes.empid }}</td>
+                <td>{{ employes.empname }}</td>
+                <td>{{ employes.contactnumber }}</td>
+                <td>{{ employes.alternatemobilenbr }}</td>
+                <td>{{ employes.officemailid }}</td>
+                <td>{{ employes.personalmailid }}</td>
+                <td>{{ employes.address }}</td>
+                <td>{{ employes.permanentaddress }}</td>
+                <td>{{ employes.skills }}</td>
+                <td>{{ employes.experience}}</td>
+                <td>{{ employes.doj }}</td>
+                <td>{{ employes.dob }}</td>
+              </tr>
+            </tbody>
+            </table>  -->
+             <table datatable    [dtTrigger]="dtTrigger" class="table  table-striped table-bordered  display"   >
+                <thead>
+                  <tr>
+                    <th class="text-center">Id</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Contact Number</th>
+                    <th class="text-center">Alternative Contact</th>
+                    <th class="text-center">Office Email Id</th>
+                    <th class="text-center">Personal Email Id</th>
+                    <th class="text-center">Present Address</th>
+                    <th class="text-center">Permanent Address</th>
+                    <th class="text-center">Skills</th>
+                    <th class="text-center">Experience</th>
+                    <th class="text-center">Date Of Birth</th>
+                    <th class="text-center">Date of Joining</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let person of Employee">
+                    <td class="text-center">{{ person.empid }}</td>
+                    <td class="text-center">{{ person.empname }}</td>
+                    <td class="text-center">{{ person.contactnumber }}</td>
+                    <td class="text-center">{{ person.alternatemobilenbr }}</td>
+                    <td class="text-center">{{ person.officemailid }}</td>
+                    <td class="text-center">{{ person.personalmailid }}</td>
+                    <td class="text-center">{{ person.address }}</td>
+                    <td class="text-center">{{ person.permanentaddress }}</td>
+                    <td class="text-center">{{ person.skills }}</td>
+                    <td class="text-center">{{ person.experience }}</td>
+                    <td class="text-center">{{ person.dob }}</td>
+                    <td class="text-center">{{ person.doj }}</td>
+                  </tr>
+                </tbody>
+                </table>
+              
+              
+              
+              </div> 
