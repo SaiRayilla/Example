@@ -5,16 +5,14 @@ import { SearchemployeeComponent } from './searchemployee/searchemployee.compone
 import { EmployeeComponentComponent } from './employee-component/employee-component.component';
 import { TableComponent } from './table/table.component';
 import { LoginComponent } from './login/login.component';
-
-
-
-
+import { UpdateComponentComponent } from './update-component/update-component.component';
 
 const routes: Routes = [
     { path: '', component: EmployeeComponentComponent },
-    { path: 'login/details', component: TableComponent },
-    { path: 'login/details/findbyname', component: SearchemployeeComponent },
+    { path: 'details', component: TableComponent },
+    { path: 'findbyname', component: SearchemployeeComponent },
     { path: 'login',component:LoginComponent},
+    { path: 'update', component: UpdateComponentComponent },
    
       
 ]

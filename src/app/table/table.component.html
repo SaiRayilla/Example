@@ -1,13 +1,15 @@
-
-        <div class="well">
-                <ul class="breadcrumb">
-                  <li class="active"><a [routerLink]="['..']">SignOut/&nbsp;</a></li>
-                  <li class="inactive"><a  [routerLink]="['findbyname']">Search&nbsp;</a></li>
-                </ul>
-            </div>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+      
+<div>
+  <ul class="nav nav-tabs">
+   <li class><a href="login">SignOut&nbsp;</a></li>
+   <li><a  href="findbyname" >Search&nbsp;</a></li>
+  </ul>
+</div>
        
 
 <div class="container">
+    
     <table datatable [dtTrigger]="dtTrigger" class="table table-striped   display table-bordered" >
         <thead>
                   <tr>
@@ -23,7 +25,7 @@
                     <th class="text-center">Experience</th>
                     <th class="text-center">Date Of Birth            </th>
                     <th class="text-center">Date of Joining</th>
-                    
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -40,7 +42,17 @@
                     <td class="text-center">{{ person.experience }}</td>
                     <td class="text-center">{{ person.dob }}</td>
                     <td class="text-center">{{ person.doj }}</td>
-                 
+                    <td> 
+                        <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" (click)="onEdit(person)">
+                        
+                        </button>
+                        
+                        
+                            <button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" (click)="onSubmit(person)">
+                            
+                            </button>
+                            
+                            </td>
                   
                 </tr>
                 </tbody>
@@ -48,6 +60,7 @@
                 </table>
                 
               </div>
+         
               
               
   

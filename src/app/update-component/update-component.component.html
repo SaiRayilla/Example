@@ -1,10 +1,10 @@
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
 
 
+
 <div>
     <ul class="nav nav-tabs">
-      <!-- <li class="active"><a [routerLink]="['']">User Details&nbsp;</a></li> -->
-      <li class="inactive"><a  [routerLink]="['login']">Log In&nbsp;</a></li>
+    <h3>Update Employee</h3>
       </ul>
   </div>
 
@@ -59,11 +59,10 @@
               <label for="doj">Date Of Joining:      &nbsp;  &nbsp; &nbsp;  <input type="text" class="form-control" id="doj" required [(ngModel)]="employee.doj" name="doj">
               </label>
           </div>
- 
-<div>
+          <div>
 
-    <button type="submit" (click)="onSubmit()"   class="btn btn-success">Submit</button>
-  </div>
+              <button type="submit" (click)="onSubmit()"   class="btn btn-success">Update</button>
+            </div>
  <!-- <div >
     
         <span *ngIf="employee.empid">
@@ -77,9 +76,3 @@
 
 
 
-
-<div [hidden]="!submitted">
-<h4>You submitted successfully!</h4>
-
-</div>
-</div>

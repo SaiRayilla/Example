@@ -12,14 +12,16 @@ export class EmployeeComponentComponent implements OnInit {
   submitted: boolean;
   constructor(private employeeService: EmployeeService) { }
 
+ 
   ngOnInit() {
+    
   }
   newCustomer(): void {
     this.submitted = false;
     this.employee = new Employee();
   }
-  
   save() {
+    debugger
     this.employeeService.createEmployee(this.employee)
       .subscribe(data => console.log(data), error => console.log(error));
     this.employee = new Employee();

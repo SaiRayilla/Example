@@ -12,9 +12,10 @@ export class TableService {
   getEmployeeList(): Observable<any> {
     return this.http.get(`${this.url}`);
   }
-  private base='http://localhost:9090/update'
-    
-  Update(): Observable<any>{
-    return this.http.get(`${this.base}`);
+   private base='http://localhost:9090/Delete';
+  
+  deleteemployee(empid:String):Observable<Object>{
+ 
+    return this.http.delete(`${this.base}/${empid}`)
   }
 }

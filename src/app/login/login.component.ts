@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   login()  {
-    if(this.id== this.employee.empid && this.pswd == this.employee.empname){
-     this.router.navigate(["login/details"]);
+    if(this.id == 'admin' && this.pswd =='admin' ){
+     this.router.navigate(["details"]);
     }else {
       alert("Invalid credentials");
       this.id='';

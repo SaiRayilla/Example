@@ -13,6 +13,8 @@ import { DataTablesModule } from 'angular-datatables';
 import { TableComponent } from './table/table.component';
 import { LoginComponent } from './login/login.component';
 
+import { UpdateComponentComponent } from './update-component/update-component.component';
+
 
 
 
@@ -24,6 +26,8 @@ import { LoginComponent } from './login/login.component';
     SearchemployeeComponent,
     TableComponent,
     LoginComponent,
+  
+    UpdateComponentComponent,
 
 
   ],
