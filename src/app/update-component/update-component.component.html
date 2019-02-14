@@ -8,7 +8,7 @@
       </ul>
   </div>
 
-<div class="container" >
+
 <div id="myTabContent" class="tab-content">
 <div class="tab-pane active in"  >
 <form>
@@ -39,7 +39,7 @@
           <label for="address"> Present Address:   &nbsp;  &nbsp; &nbsp;<input type="text" class="form-control" id="address" required [(ngModel)]="employee.address" name="address">
           </label>
         </div>
-      <div class="form-group">
+        <div class="form-group">
           <label for="permanentaddress">Permanent Address:          <input type="text" class="form-control" id="permanentaddress" required [(ngModel)]="employee.permanentaddress" name="permanentaddress">
           </label>
         </div>
@@ -48,9 +48,15 @@
           </label>
         </div>
         <div class="form-group">
-            <label for="experience">Experience:       &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;<input type="text" class="form-control" id="experience" required [(ngModel)]="employee.experience" name="experience">
-            </label>
-          </div>
+          <!-- <label for="experience">Experience:       &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;<input type="text" class="form-control" id="experience" required [(ngModel)]="employee.experience" name="experience">
+          </label> -->
+          <label for="experience">Experience:&nbsp; &nbsp;  &nbsp;    &nbsp;  &nbsp; &nbsp;  &nbsp;<select name="experience" id="experience"  [(ngModel)]="employee.experience"class="form-control">
+            <option value="6 months">6 months</option>
+            <option value="1 Years">1 Years</option>
+            <option value="2 years">2 years</option>
+            <option value="3 years">3 years</option>
+          </select></label>
+        </div>
           <div class="form-group">
             <label for="dob">Date Of Birth:         &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  <input type="text" class="form-control" id="dob" required [(ngModel)]="employee.dob" name="dob">
             </label>
@@ -60,19 +66,13 @@
               </label>
           </div>
           <div>
-
-              <button type="submit" (click)="onSubmit()"   class="btn btn-success">Update</button>
-            </div>
- <!-- <div >
-    
-        <span *ngIf="employee.empid">
-          <button type="submit" (click)="onSubmit()"   class="btn btn-success">Submit</button></span>
-        <span *ngIf="!employee.empid"><button type="submit" (click)="onSubmit()"   class="btn btn-success">Updarte</button></span>
-      </span>
-   
-</div>  -->
+            <button type="submit" (click)="onSubmit()"   class="btn btn-success">Update</button>
+          </div>
 </form>
 </div>
+</div>
+
+
 
 
 

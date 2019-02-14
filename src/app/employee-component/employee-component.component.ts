@@ -24,11 +24,13 @@ export class EmployeeComponentComponent implements OnInit {
     debugger
     this.employeeService.createEmployee(this.employee)
       .subscribe(data => console.log(data), error => console.log(error));
+      debugger;
     this.employee = new Employee();
   }
  
   onSubmit() {
     this.submitted = true;
+
     this.save();
     
   }

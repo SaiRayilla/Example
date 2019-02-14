@@ -48,8 +48,16 @@
           </label>
         </div>
         <div class="form-group">
-            <label for="experience">Experience:       &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;<input type="text" class="form-control" id="experience" required [(ngModel)]="employee.experience" name="experience">
-            </label>
+            <!-- <label for="experience">Experience:       &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;<input type="text" class="form-control" id="experience" required [(ngModel)]="employee.experience" name="experience">
+            </label> -->
+            <label for="experience">Experience:&nbsp; &nbsp;  &nbsp;    &nbsp;  &nbsp; &nbsp;  &nbsp;<select name="experience" id="experience"  [(ngModel)]="employee.experience"class="form-control">
+              
+              <option value="6 months">6 months</option>
+              <option value="1 Years">1 Years</option>
+              <option value="2 years">2 years</option>
+              <option value="3 years">3 years</option>
+            </select></label>
+            
           </div>
           <div class="form-group">
             <label for="dob">Date Of Birth:         &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp;  <input type="text" class="form-control" id="dob" required [(ngModel)]="employee.dob" name="dob">

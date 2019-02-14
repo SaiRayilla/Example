@@ -15,8 +15,7 @@ export class TableComponent implements  OnInit {
   employee: Employee[] = [];
   empid: any;
   Employee: Object;
-  activeModal: any;
-  eventManager: any;
+
   
  
   constructor(private http: TableService,private router:Router ){}
@@ -24,7 +23,6 @@ export class TableComponent implements  OnInit {
   {
   this.searchEmployee1();
   }
-
   private searchEmployee1() {
     this.http. getEmployeeList()
       .subscribe(employee => this.employee = employee);
@@ -53,9 +51,9 @@ this.router.navigate(["update"]);
 }
 
 onSubmit(person){
+  debugger; 
   let data=person.empid;
-  this.http.deleteemployee(data).subscribe(employee => this.Employee = employee);
-  this.router.navigate(["details"]);
+  this.http.deleteemployee(data).subscribe(employee => this.Employee = employee); 
 }
 
 }

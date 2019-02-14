@@ -6,60 +6,48 @@
    <li><a  href="findbyname" >Search&nbsp;</a></li>
   </ul>
 </div>
-       
-
-<div class="container">
-    
+<div class="container"> 
     <table datatable [dtTrigger]="dtTrigger" class="table table-striped   display table-bordered" >
         <thead>
-                  <tr>
-                    <th class="text-center">EmployeeId </th>
-                    <th class="text-center">Name</th>
-                    <th class="text-center">Contact Number</th>
-                    <th class="text-center">Alternative Contact</th>
-                    <th class="text-center">Office Email Id</th>
-                    <th class="text-center">Personal Email Id</th>
-                    <th class="text-center">Present Address</th>
-                    <th class="text-center">Permanent Address</th>
-                    <th class="text-center">Skills</th>
-                    <th class="text-center">Experience</th>
-                    <th class="text-center">Date Of Birth            </th>
-                    <th class="text-center">Date of Joining</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let person of employee">
-                    <td class="text-center">{{ person.empid }}</td>
-                    <td class="text-center">{{ person.empname }}</td>
-                    <td class="text-center">{{ person.contactnumber }}</td>
-                    <td class="text-center">{{ person.alternatemobilenbr }}</td>
-                    <td class="text-center">{{ person.officemailid }}</td>
-                    <td class="text-center">{{ person.personalmailid }}</td>
-                    <td class="text-center">{{ person.address }}</td>
-                    <td class="text-center">{{ person.permanentaddress }}</td>
-                    <td class="text-center">{{ person.skills }}</td>
-                    <td class="text-center">{{ person.experience }}</td>
-                    <td class="text-center">{{ person.dob }}</td>
-                    <td class="text-center">{{ person.doj }}</td>
-                    <td> 
-                        <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" (click)="onEdit(person)">
-                        
-                        </button>
-                        
-                        
-                            <button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" (click)="onSubmit(person)">
-                            
-                            </button>
-                            
-                            </td>
-                  
-                </tr>
-                </tbody>
-            
-                </table>
-                
-              </div>
+          <tr>
+            <th class="text-center">EmployeeId </th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Contact Number</th>
+            <th class="text-center">Alternative Contact</th>
+            <th class="text-center">Office Email Id</th>
+            <th class="text-center">Personal Email Id</th>
+            <th class="text-center">Present Address</th>
+            <th class="text-center">Permanent Address</th>
+            <th class="text-center">Skills</th>
+            <th class="text-center">Experience</th>
+            <th class="text-center">Date Of Birth            </th>
+            <th class="text-center">Date of Joining</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let person of employee">
+            <td class="text-center">{{ person.empid }}</td>
+            <td class="text-center">{{ person.empname }}</td>
+            <td class="text-center">{{ person.contactnumber }}</td>
+            <td class="text-center">{{ person.alternatemobilenbr }}</td>
+            <td class="text-center">{{ person.officemailid }}</td>
+            <td class="text-center">{{ person.personalmailid }}</td>
+            <td class="text-center">{{ person.address }}</td>
+            <td class="text-center">{{ person.permanentaddress }}</td>
+            <td class="text-center">{{ person.skills }}</td>
+            <td class="text-center">{{ person.experience }}</td>
+            <td class="text-center">{{ person.dob }}</td>
+            <td class="text-center">{{ person.doj }}</td>
+            <td>
+              <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" (click)="onEdit(person)"></button>
+              <button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" (click)="onSubmit(person)"></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>                
+             
          
               
               
