@@ -16,8 +16,6 @@ export class TableComponent implements  OnInit {
   empid: any;
   Employee: Object;
 
-  
- 
   constructor(private http: TableService,private router:Router ){}
   ngOnInit()
   {
@@ -32,7 +30,7 @@ export class TableComponent implements  OnInit {
   {
     this.router.navigate(["login"]);
   }
-onEdit(person)
+  onEdit(person)
 {
 debugger
 localStorage.setItem('Instutite_id',JSON.stringify(person.empid));
@@ -54,8 +52,13 @@ onSubmit(person){
   debugger; 
   let data=person.empid;
   this.http.deleteemployee(data).subscribe(employee => this.Employee = employee); 
+  this.pageRefresh();
+  alert("Employee Data is Deleted sucessfully");
 }
-
+ 
+pageRefresh() {
+  location.reload();
+}
 }
 
 

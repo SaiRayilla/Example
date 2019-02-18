@@ -1,5 +1,4 @@
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
-      
 <div>
   <ul class="nav nav-tabs">
    <li class><a href="login">SignOut&nbsp;</a></li>
@@ -20,7 +19,7 @@
             <th class="text-center">Permanent Address</th>
             <th class="text-center">Skills</th>
             <th class="text-center">Experience</th>
-            <th class="text-center">Date Of Birth            </th>
+            <th class="text-center">Date Of Birth</th>
             <th class="text-center">Date of Joining</th>
             <th></th>
           </tr>
@@ -40,8 +39,8 @@
             <td class="text-center">{{ person.dob }}</td>
             <td class="text-center">{{ person.doj }}</td>
             <td>
-              <button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" (click)="onEdit(person)"></button>
-              <button class="btn btn-danger btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" (click)="onSubmit(person)"></button>
+              <button class="btn btn-primary btn-xs"  (click)="onEdit(person)">Edit</button>
+              <button class="btn btn-danger btn-xs" (click)="onSubmit(person)">Delete</button>
             </td>
           </tr>
         </tbody>

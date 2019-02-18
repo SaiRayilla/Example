@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee.service';
 import { Employee } from '../employee';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-update-component',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class UpdateComponentComponent implements OnInit {
   employee: Employee = new Employee();
   submitted: boolean;
-  constructor(private employeeService: EmployeeService, private router:Router) { }
+  constructor(private employeeService: EmployeeService, private router:Router,private location: Location) { }
 
   ngOnInit() {
     this.employee.empid = (JSON.parse(localStorage.getItem('Instutite_id')));
@@ -37,6 +38,12 @@ export class UpdateComponentComponent implements OnInit {
     this.submitted = true;
     this.update();
     this.router.navigate(["details"]);
+    this.pageRefresh();
   }
+ 
 
+  
+  pageRefresh() {
+     location.reload();
+  }
 }

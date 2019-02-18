@@ -13,6 +13,7 @@ padding: 5%;
 border: 1px solid #ced4da;
 margin-bottom: 0.5%;
 text-align: center;
+height: 15%;
 }
 
 .btnSubmit
@@ -37,4 +38,8 @@ color: #fff;
 }
 .form-control{
     margin-bottom: 0.5%;
+}
+.container{
+    width: 100%;
+
 }

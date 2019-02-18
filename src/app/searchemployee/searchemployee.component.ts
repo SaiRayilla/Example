@@ -25,13 +25,13 @@ export class SearchemployeeComponent implements OnInit {
    if(this.empid){
     this.dataService.getemployee1(this.empid)
     .subscribe(employee => this.Employee = employee);
-     setTimeout(() => { this.dtTrigger.next() }, 10);
+    //  setTimeout(() => { this.dtTrigger.next() }, 1000);
    }else{
     this.dataService.getemployee(this.empname)
     .subscribe(employee => this.Employee = employee);
-     setTimeout(() => { this.dtTrigger.next() }, 10);
+    //  
    }
-  
+   setTimeout(() => { this.dtTrigger.next() }, 1000);
 }
   
   onSubmit() {

@@ -15,20 +15,20 @@ export class EmployeeService {
   private base1='http://localhost:9090/update';
   constructor(private http: HttpClient) { }
   
-  createEmployee(Employee: Object): Observable<Object> {
+  createEmployee(Employee: Object) {
     return this.http.post(`${this.baseUrl1}`,Employee);
   }
-  getemployee(empname: String): Observable<Object> {
+  getemployee(empname: String){
     return this.http.get(`${this.url}/${empname}`);
   }
-  getemployee1(empid: String): Observable<Object> {
+  getemployee1(empid: String){
     return this.http.get(`${this.target}/${empid}`);
   }
-  getEmployeeList(): Observable<any> {
+  getEmployeeList(){
     return this.http.get(`${this.url}`);
   }
   
-  updateemployee(Employee: Object):Observable<Object>{
+  updateemployee(Employee: Object){
     return this.http.put(`${this.base1}`,Employee)
   }
 }
